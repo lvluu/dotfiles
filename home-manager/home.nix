@@ -22,6 +22,12 @@ enableCompletion = true;
     ll = "ls -l";
     update = "sudo nixos-rebuild switch";
   };
+  zplug = {
+    enable = true;
+    plugins = [
+      { name = "zsh-users/zsh-autosuggestions"; } 
+    ];
+  };
   history.size = 10000;
 
       oh-my-zsh = {
