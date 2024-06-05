@@ -119,7 +119,8 @@ wsl.extraBin = with pkgs; [
     kubernetes-helm
     htop
     cloudflared
-    
+    pre-commit
+    lsof
         ];
    fonts.packages = with pkgs; [
     dejavu_fonts
