@@ -121,7 +121,9 @@ wsl.extraBin = with pkgs; [
     cloudflared
     pre-commit
     lsof
-        ];
+dotnet-sdk_8
+sshpass    
+    ];
    fonts.packages = with pkgs; [
     dejavu_fonts
     emacs-all-the-icons-fonts
