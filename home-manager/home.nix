@@ -33,8 +33,11 @@ enableCompletion = true;
       oh-my-zsh = {
     enable = true;
     plugins = [ "git" "thefuck" "history" "npm" "docker" "docker-compose"];
-    theme = "robbyrussell";
+    theme = "my-robbyrussell";
+    custom = "$HOME/my-customizations"; 
+
   };
+	
 
   };
 

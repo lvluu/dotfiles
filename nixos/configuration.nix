@@ -33,18 +33,31 @@ wsl.extraBin = with pkgs; [
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
+time.timeZone = "Asia/Ho_Chi_Minh";
+services.tailscale.enable = true;
   services.openssh.enable = true;
   services.openssh.settings.PasswordAuthentication = false;
   virtualisation.docker.enable = true;
   virtualisation.docker.rootless = {
   enable = true;
   setSocketVariable = true;
-};
+   };
 
 
 # Enable nix ld
   programs.nix-ld.enable = true;
+  programs.tmux = {
+	
+	enable = true;
+	clock24 = false;
+ extraConfig = '' # used for less common options, intelligently combines if defined in multiple places.
 
+	set-option -g default-shell ${pkgs.zsh}/bin/zsh	
+	set-option -g mouse on
+  '';	
+
+
+};
   programs.nix-ld.libraries = with pkgs; [
     alsa-lib
     at-spi2-atk
@@ -100,6 +113,12 @@ wsl.extraBin = with pkgs; [
   ];
 
  nixpkgs.config.allowUnfree = true;
+
+ environment.variables = {
+	EDITOR="vi";	
+};
+
+
   environment.systemPackages = with pkgs; [
     vim
     git
@@ -109,6 +128,8 @@ wsl.extraBin = with pkgs; [
     python3
     go
     nodejs_21
+    gcc13 
+    rustup
     home-manager   
     zoxide
     fzf
@@ -123,6 +144,11 @@ wsl.extraBin = with pkgs; [
     lsof
 dotnet-sdk_8
 sshpass    
+google-chrome
+ddev
+php83Packages.composer
+php
+k9s
     ];
    fonts.packages = with pkgs; [
     dejavu_fonts
