@@ -43,4 +43,15 @@ source ~/.zshrc
 
 ## NUSHELL
 
--- coming soon
+### Preresquites
+
+- scoop
+- starship, then starship init nu
+- zoxide + fzf
+- nushell 
+ 
+### Apply nu config
+
+- Clone this repo
+- Copy content of nu/* to C:\Users\%USER%\AppData\Roaming\nushell
+- source config.nu
