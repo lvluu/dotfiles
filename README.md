@@ -4,7 +4,7 @@
 
 These simple dotfiles are used to configure my development environment on NixOS. They include settings for various applications and tools that I use regularly, managed through [home-manager](https://github.com/nix-community/home-manager).
 
-## Setup
+## NIX
 
 ### Nix configuration
 
@@ -40,3 +40,7 @@ Don't forget to
 ```bash
 source ~/.zshrc
 ```
+
+## NUSHELL
+
+-- coming soon
