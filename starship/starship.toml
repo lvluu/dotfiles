@@ -1,0 +1,14 @@
+[nodejs]
+disabled = true
+
+[golang]
+disabled = true
+
+[java]
+disabled = true
+
+[python]
+disabled = true
+
+[kubernetes]
+disabled = true

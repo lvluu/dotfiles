@@ -1,0 +1,14 @@
+[vim.files]
+"vim/.vimrc" = "~/.vimrc"  # repo path 'vimrc' → target '~/.vimrc'
+
+# — Nushell —
+[nushell.files]
+"nushell/config.nu" = "~/.config/nushell/config.nu"
+"nushell/env.nu"    = "~/.config/nushell/env.nu"
+
+# — WezTerm —
+[wezterm.files]
+"wezterm/.wezterm.lua" = "~/.wezterm.lua"
+
+[starship.files]
+"starship/starship.toml" = "~/.config/starship.toml"
