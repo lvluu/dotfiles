@@ -1,14 +1,61 @@
-[nodejs]
+# ~/.config/starship.toml
+command_timeout = 100000
+# Inserts a blank line between shell prompts
+add_newline = false
+[package]
+disabled =true
+# Shows an icon that should be included by zshrc script based on the distribution or os
+[env_var.STARSHIP_DISTRO]
+format = '[$env_value](bold white)'  # removed space between distro and rest for pwsh
+variable = "STARSHIP_DISTRO"
 disabled = true
+
+# Shows the username
+[username]
+style_user = "white bold"
+style_root = "black bold"
+format = "[$user]($style) "
+disabled = true 
+show_always = false
+
+[character] # The name of the module we are configuring is 'character'
+success_symbol = '[λ](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+
+[directory]
+truncation_length = 3
+truncation_symbol = "…/"
+home_symbol = "~"
+read_only_style = "197"
+truncate_to_repo = false
+format = "🚀 [$path]($style)[$read_only]($read_only_style) "
+
+[git_branch]
+format = "on [$branch(:$remote_branch)]($style) "
+[git_status]
+disabled =true
+[terraform]
+disabled =true
+format = "via [ terraform $version]($style) 壟 [$workspace]($style) "
+
 
 [golang]
 disabled = true
-
-[java]
+[nodejs]
+format = "via [ $version](bold green) "
 disabled = true
 
-[python]
-disabled = true
+[ruby]
+disabled =true
+format = "via [ $version]($style) "
 
 [kubernetes]
 disabled = true
+
+[gradle]
+disabled=true
+
+[java]
+disabled=true
+
+[rust]
+disabled=true

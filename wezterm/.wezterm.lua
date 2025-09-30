@@ -28,74 +28,74 @@ config.window_frame = {
 }
 
 
--- 修改切换终端快捷键
+-- Change terminal switching keybindings
 config.keys = {
 
 	{ key = "h", mods = "CTRL|ALT", action = wezterm.action({ ActivateTabRelative = -1 }) },
 	{ key = "l", mods = "CTRL|ALT", action = wezterm.action({ ActivateTabRelative = 1 }) },
 	{ key = "w", mods = "CTRL|ALT", action = wezterm.action({ CloseCurrentTab = { confirm = true } }) },
 	{ key = "n", mods = "CTRL|ALT", action = wezterm.action({ SpawnTab = "CurrentPaneDomain" }) },
-	-- F11 切换全屏
+	-- F11 toggle fullscreen
 	{ key = "F11", mods = "NONE", action = wezterm.action.ToggleFullScreen },
-	-- Ctrl + Shift + - 缩小字体
+	-- Ctrl + Shift + - decrease font size
 	{ key = "-", mods = "CTRL|SHIFT", action = wezterm.action.IncreaseFontSize },
-	-- Ctrl + Shift + = 扩大字体
+	-- Ctrl + Shift + = increase font size
 	{ key = "=", mods = "CTRL|SHIFT", action = wezterm.action.DecreaseFontSize },
-	-- Ctrl + Shift + 0 重置字体
+	-- Ctrl + Shift + 0 reset font size
 	{ key = "0", mods = "CTRL|SHIFT", action = wezterm.action.ResetFontSize },
-	-- 垂直分屏
+	-- Split vertically
 	{ key = "d", mods = "CTRL|SHIFT", action = wezterm.action({ SplitVertical = { domain = "CurrentPaneDomain" } }) },
-	-- 水平分屏
+	-- Split horizontally
 	{ key = "s", mods = "CTRL|SHIFT", action = wezterm.action({ SplitHorizontal = { domain = "CurrentPaneDomain" } }) },
-	-- 关闭当前窗格
+	-- Close current pane
 	{ key = "w", mods = "CTRL|SHIFT", action = wezterm.action({ CloseCurrentPane = { confirm = true } }) },
-	-- 切换到左侧窗格
+	-- Switch to left pane
 	{ key = "h", mods = "CTRL|SHIFT", action = wezterm.action({ ActivatePaneDirection = "Left" }) },
-	-- 切换到下方窗格
+	-- Switch to pane below
 	{ key = "j", mods = "CTRL|SHIFT", action = wezterm.action({ ActivatePaneDirection = "Down" }) },
-	-- 切换到上方窗格
+	-- Switch to pane above
 	{ key = "k", mods = "CTRL|SHIFT", action = wezterm.action({ ActivatePaneDirection = "Up" }) },
-	-- 切换到右侧窗格
+	-- Switch to right pane
 	{ key = "l", mods = "CTRL|SHIFT", action = wezterm.action({ ActivatePaneDirection = "Right" }) },
 }
 
--- 配置SSH域
+-- Configure SSH domains
 -- config.ssh_domains = {
 -- 	{
--- 		name = "energy", -- 配置标识域名
--- 		remote_address = "47.104.236.128", -- 配置远程地址
--- 		username = "root", -- 配置用户名
+-- 		name = "energy", -- domain identifier
+-- 		remote_address = "47.104.236.128", -- remote address
+-- 		username = "root", -- username
 -- 	},
 -- }
--- 关闭时不进行确认
+-- Do not prompt for confirmation when closing
 config.window_close_confirmation = "NeverPrompt"
 
--- 配置透明背景
-config.window_background_opacity = .88 -- 设置透明度
-config.text_background_opacity = 1 -- 设置文字透明度
--- 设置背景图片
+-- Configure transparent background
+config.window_background_opacity = 1 -- set opacity
+config.text_background_opacity = 1 -- set text background opacity
+-- Set background image
 -- config.window_background_image = "C:\\Users\\Kai\\Pictures\\年年-云端\\20261110256233.jpg"
 
--- 如果只有一个标签页，则隐藏标签栏
+-- Hide the tab bar if there's only one tab
 config.hide_tab_bar_if_only_one_tab = false
--- 隐藏底部状态栏
+-- Hide bottom status bar (use resize-only window decorations)
 config.window_decorations = "RESIZE"
--- 禁用滚动条
+-- Disable scroll bar
 config.enable_scroll_bar = false
--- 配置字体大小
+-- Set font size
 config.font_size = 13
--- 配置窗口打开时默认大小
+-- Default window size on open
 config.initial_cols = 128
 config.initial_rows = 26
 config.use_fancy_tab_bar = false
 config.enable_tab_bar = true
 config.show_tab_index_in_tab_bar = true
 
--- -- 配置窗口为圆角
+-- -- Configure window/background image HSB adjustments (rounded window)
 -- config.window_background_image_hsb = {
--- 	brightness = 0.1, -- 调整背景图片亮度
--- 	hue = 1, -- 调整背景图片色调
--- 	saturation = 1, -- 调整背景图片饱和度
+-- 	brightness = 0.1, -- adjust background image brightness
+-- 	hue = 1, -- adjust background image hue
+-- 	saturation = 1, -- adjust background image saturation
 -- }
 
 
