@@ -16,6 +16,12 @@ source ~/.local/share/atuin/init.nu
 #     $env.PROMPT_INDICATOR_VI_INSERT = {|| $"(ansi green): " }
 #     $env.PROMPT_INDICATOR_VI_NORMAL = {|| $"(ansi green)> " }
 
+$env.config.history = {
+  file_format: sqlite
+  max_size: 1_000_000
+  sync_on_enter: true
+}
+
 alias g = git
 alias cat = open
 alias k = kubectl
