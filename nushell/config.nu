@@ -1,6 +1,10 @@
 
 source C:\Users\lvluu\AppData\Roaming\nushell\git.nu
 source  ~/.zoxide.nu
+# mkdir ~/.local/share/atuin/
+# atuin init nu | save ~/.local/share/atuin/init.nu
+source ~/.local/share/atuin/init.nu
+
 # source C:\Users\lvluu\AppData\Roaming\nushell\direnv.nu
 # source C:\Users\lvluu\AppData\Roaming\nushell\nu_scripts\custom-completions\docker\docker-completions.nu
 # source C:\Users\lvluu\AppData\Roaming\nushell\nu_scripts\nu-hooks\nu-hooks\command_not_found\did_you_mean.nu
