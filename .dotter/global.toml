@@ -1,14 +1,13 @@
-[vim.files]
-"vim/.vimrc" = "~/.vimrc"  # repo path 'vimrc' → target '~/.vimrc'
+[helpers]
 
-# — Nushell —
-[nushell.files]
-"nushell/config.nu" = "~/AppData/Roaming/nushell/config.nu"
-"nushell/env.nu"    = "~/AppData/Roaming/nushell/env.nu"
+[default]
+depends = []
 
-# — WezTerm —
-[wezterm.files]
-"wezterm/.wezterm.lua" = "~/.wezterm.lua"
+[default.files]
+nushell = "~/AppData/Roaming/nushell/"
+starship = "~/.config/"
 
-[starship.files]
-"starship/starship.toml" = "~/.config/starship.toml"
+[default.variables]
+
+[settings]
+default_target_type = "automatic"
