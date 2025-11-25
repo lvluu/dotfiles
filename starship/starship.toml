@@ -28,6 +28,11 @@ home_symbol = "~"
 read_only_style = "197"
 truncate_to_repo = false
 
+
+[python]
+disabled = false
+format = "[${symbol}(env::${virtualenv})]($style)"
+
 [git_branch]
 format = "on [$branch(:$remote_branch)]($style) "
 [git_status]
